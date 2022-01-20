@@ -1,3 +1,6 @@
-body{
-    background-color: #e5e5e5;
+body {
+	/* background-color: #e5e5e5; */
+	background-color: white;
 }
+
+/* TODO: ensure background color takes up ALL page height not half the page. */
