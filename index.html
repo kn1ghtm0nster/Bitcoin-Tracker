@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/6687905a74.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="BTC_styles.css">
+    <title>Bitcoin Price Tracker</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="phone w/ stocks">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Bitcoin Price Tracker
+                            </p>
+                        </header>
+                        <div class="card-content">
+                          <div class="content">
+                            Hi There! <br>
+                            Diego left me here to let you know that this little tool will help you track the price of Bitcoin
+                            every 15 minutes. You can follow him using the link below. We hope you enjoy using the Bitcoin Price Tracker!
+                            <br>
+                            <br>
+                            Socials:
+                            <a href="https://twitter.com/QUESADILLA69" target="_blank">
+                                <button class="button is-info is-small">
+                                    <span class="icon">
+                                        <i class="fab fa-twitter has-text-white"></i>
+                                    </span>
+                                </button>
+                            </a>
+                            <a href="https://www.instagram.com/quintanilla7944/" target="_blank">
+                                <button class="button is-info is-small">
+                                    <span class="icon">
+                                        <i class="fab fa-instagram is-medium"></i>
+                                    </span>
+                                </button>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank">
+                                <button class="button is-info is-small">
+                                    <span class="icon">
+                                        <i class="fab fa-linkedin-in is-medium"></i>
+                                    </span>
+                                </button>
+                            </a>
+                            <a href="https://www.twitch.tv/quesadilla_69" target="_blank">
+                                <button class="button is-info is-small">
+                                    <span class="icon">
+                                        <i class="fab fa-twitch is-medium"></i>
+                                    </span>
+                                </button>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCRDiTExjOX6QTMa3IajVT8A" target="_blank">
+                                <button class="button is-info is-small">
+                                    <span class="icon">
+                                        <i class="fab fa-youtube is-medium"></i>
+                                    </span>
+                                </button>
+                            </a>
+                            <br>
+                          </div>
+                        </div>
+                        <footer class="card-footer">
+                            <button class="button card-footer-item is-success is-large" id="startButton">Start Price Tracker</button>
+                            <button class="button card-footer-item is-danger is-large" id="stopButton">Stop Price Tracker</button>
+                        </footer>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <ul id="returnedContent">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="tracker.js"></script>
+</body>
+</html>
+
+<!-- TODO
+    - ADD SOCIAL LINK BUTTONS 
+    - Style fonts-->
