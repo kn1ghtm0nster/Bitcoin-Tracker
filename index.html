@@ -17,27 +17,26 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-half is-offset-one-quarter">
-                    <div class="card">
+                    <div class="card ">
                         <div class="card-image">
-                            <figure class="image is-3by2">
-                                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            <figure class="box image is-3by2">
+                                <img src="https://images.unsplash.com/photo-1634038971758-9c1ac2c984d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Yml0Y29pbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
                                     alt="phone w/ stocks">
                             </figure>
                         </div>
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Bitcoin Price Tracker
-                            </p>
-                        </header>
                         <div class="card-content">
                             <div class="content">
-                                Hi There! <br>
-                                Diego left me here to let you know that this little tool will help you track the price
-                                of Bitcoin
-                                every 15 minutes. You can follow him using the link below. We hope you enjoy using the
-                                Bitcoin Price Tracker!
-                                <br>
-                                <br>
+                                <p class="title has-text-centered">
+                                    Bitcoin Price Tracker
+                                </p>
+                                <p>
+                                    Current Price: <span id="curr-price"></span>
+                                </p>
+
+                                <p>
+                                    Percent Change: <span id="curr-percent"></span>
+                                </p>
+
                                 Socials:
                                 <a href="https://twitter.com/QUESADILLA69" target="_blank">
                                     <button class="button is-info is-small">
@@ -60,54 +59,27 @@
                                         </span>
                                     </button>
                                 </a>
-                                <a href="https://www.twitch.tv/quesadilla_69" target="_blank">
+                                <a href="https://github.com/kn1ghtm0nster" target="_blank">
                                     <button class="button is-info is-small">
                                         <span class="icon">
-                                            <i class="fab fa-twitch is-medium"></i>
-                                        </span>
-                                    </button>
-                                </a>
-                                <a href="https://www.youtube.com/channel/UCRDiTExjOX6QTMa3IajVT8A" target="_blank">
-                                    <button class="button is-info is-small">
-                                        <span class="icon">
-                                            <i class="fab fa-youtube is-medium"></i>
+                                            <i class="fab fa-brands fa-github is-medum"></i>
                                         </span>
                                     </button>
                                 </a>
                                 <br>
                             </div>
                         </div>
-                        <footer class="card-footer">
-                            <button class="button card-footer-item is-success is-large" id="startButton">Start Price
-                                Tracker</button>
-                            <button class="button card-footer-item is-danger is-large" id="stopButton">Stop Price
-                                Tracker</button>
-                        </footer>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="second-section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-half is-offset-one-quarter">
-                    <ul id="returnedContent">
-
-                    </ul>
+                    <button class="box button is-success is-large is-fullwidth mb-2 mt-3" id="startButton">Start
+                        Tracker</button>
+                    <button class="box button is-danger is-large is-fullwidth" id="stopButton">Stop
+                        Tracker</button>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="tracker.js"></script>
 </body>
 
 </html>
-
-<!-- TODO
-    - ADD SOCIAL LINK BUTTONS 
-    - Style fonts-->

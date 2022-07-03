@@ -1,56 +1,51 @@
-$(document).ready(function() {
-	console.log('DOM READY!');
-});
+console.warn(
+	'I see you have found the developer tools! If you DO NOT know what or who these tools are intended for, please press F12 on your keyboard to exit.'
+);
 
-// const startButton = document.querySelector('#startButton');
-// const stopButton = document.querySelector('#stopButton');
-const ul = document.querySelector('#returnedContent');
+const startButton = document.querySelector('#startButton');
+const stopButton = document.querySelector('#stopButton');
+
+const currPrice = document.querySelector('#curr-price');
+const currPercent = document.querySelector('#curr-percent');
 
 let total = 0;
 
 const fetchBitcoinPrice = async () => {
 	try {
-		const res = await axios.get('https://api.cryptonator.com/api/ticker/btc-usd');
-		// console.log(`Price of Bitcoin: $${res.data.ticker.price}`)
-		// console.log(`Change in price: ${res.data.ticker.change}%`)
-		const testLI = document.createElement('li');
-		const info = (testLI.innerText = `Price of Bitcoin: $${res.data.ticker.price}
-        Change in price: ${res.data.ticker.change}%`);
-		const cls = testLI.classList.add('box');
-		ul.appendChild(testLI, info, cls);
+		const res = await axios.get('https://api.coinstats.app/public/v1/coins/bitcoin?currency=USD');
+		let data = res.data;
+		let returnedPrice = Number.parseFloat(data.coin.price).toFixed(2);
+		let percent = data.coin.priceChange1h;
+
+		if (percent < 0) {
+			currPrice.classList.add('has-text-danger');
+		} else {
+			currPrice.classList.add('has-text-success');
+		}
+
+		currPrice.innerText = `$${returnedPrice}`;
+		currPercent.innerText = `${percent}%`;
 	} catch (e) {
 		console.log('ERROR!', e);
 	}
 };
 
-// let ping = setInterval(() => {
-// 	fetchBitcoinPrice();
-// 	total += 1;
-// }, 900000);
-
 let ping = setInterval(() => {
+	if (total > 0) {
+		currPrice.innerText = '';
+		currPercent.innerText = '';
+	}
 	fetchBitcoinPrice();
 	total += 1;
-}, 30000);
+}, 900000);
 
-// startButton.addEventListener('click', () => {
-// 	ping;
-// });
-
-$('#startButton').on('click', function() {
+startButton.addEventListener('click', async function() {
 	ping;
 });
 
-// stopButton.addEventListener('click', function() {
-// 	clearInterval(ping);
-// 	console.log(`USER REQUESTED HALT. SERVER PINGED ${total} TIMES`);
-// });
-
-$('#stopButton').on('click', function() {
+stopButton.addEventListener('click', function() {
 	clearInterval(ping);
+	total = 0;
 	console.log(`USER REQUESTED HALT. SERVER PINGED ${total} TIMES`);
+	alert('APPLICATION HALTED! THANK YOU FOR USING THE BITCOIN TRACKER!');
 });
-
-// TODO
-// ADD FUNCTION FOR LINES 12-16 TO DE-CLUTTER ASYNC FUNCTION
-// TURN % CHANGE RED OR GREEN DEPENDING ON IF THE CHANGE IS ABOVE OR BELOW 0
