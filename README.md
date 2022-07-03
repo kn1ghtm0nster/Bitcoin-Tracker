@@ -1,6 +1,8 @@
 
 # Bitcoin Tracker
 
+![website-image](/sample_image.png?raw=true)
+
 ## Table of Contents:
 * [Overview](#overview)
 * [Technology](#technology)
@@ -11,7 +13,7 @@
 ## Overview:
 
 This project was created using the `CoinStats` API service which returna the current price of Bitcoin __in USD__. Per the docs (which can be found __[here](https://documenter.getpostman.com/view/5734027/RzZ6Hzr3?version=latest#8c32f517-5bb6-4f3a-b36d-ea2a754082ee)__).
-The static site will have two `buttons` which are the `start` and `stop` buttons and will begin pinging the service immediately or stop pinging the service from the static page.
+The app will have two `buttons` which are the `Start Tracker` and `Stop Tracker` buttons and will begin pinging the service immediately or stop pinging the service from the static page.
 
 The main purpose of this application is to allow Bitcoin traders to have an application that tracks the price of Bitcoin without the pesky ads on their page.
 

@@ -45,7 +45,7 @@ startButton.addEventListener('click', async function() {
 
 stopButton.addEventListener('click', function() {
 	clearInterval(ping);
-	total = 0;
 	console.log(`USER REQUESTED HALT. SERVER PINGED ${total} TIMES`);
+	total = 0;
 	alert('APPLICATION HALTED! THANK YOU FOR USING THE BITCOIN TRACKER!');
 });
