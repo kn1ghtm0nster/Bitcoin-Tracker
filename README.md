@@ -38,8 +38,8 @@ The main purpose of this application is to allow Bitcoin traders to have an appl
 ## FAQs:
 
 - __Q:__ "Can I clone this repo and use the tool myself locally?"
-    - __A:__ Sure! If you do use this with your own projects, All I ask is for credit on the overall code itself along with the API. Other than that feel free to track the "__stonks__" to your heart's content.
-    - __WARNING!__ Please adhere to the rate limitations for the external api tool.
+    - __A:__ Sure! If you do use this with your own projects, All I ask is for credit on the JS code and credit to the kind devs who developed the API endpoints. Other than that feel free to track the "__stonks__" to your heart's content.
+    - __WARNING!__ Please adhere to the rate limitations for the external api.
 
 - __Q:__ "Is this an open source project?"
     - __A:__ I wouldn't really call this an "open source project" but if you have any ideas for making the UI or overall logic better, faster, or cleaner, feel free to submit pull requests and I will review once time allows.
@@ -50,7 +50,7 @@ The main purpose of this application is to allow Bitcoin traders to have an appl
 - __Q:__ "Can I follow you on your social medial links?"
     - __A:__ Sure! I welcome new friends from the tech community. My Twitter isn't very informative but LinkedIn and Instagram are there along with my GitHub.
 
-- __Q:__: "If the application starts on its own, why did you leave the `Start Tracker` button on the application?"
+- __Q:__ "If the application starts on its own, why did you leave the `Start Tracker` button on the application?"
     - __A:__ Because the app is asynchronous by default meaning that once the page loads, the API is pinged on its own every 15 minutes. Yes, that means that you have to wait for the data to come to you first and then you have the freedom of stopping and starting as you please.
     - __NOTE:__ This is also because I could not find a way to prevent async functions from running automatically so if you have suggestions, let me know!
 
